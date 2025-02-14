@@ -1,0 +1,1038 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+} /*# sourceMappingURL=style.css.map */
+
+.container {
+  width: 1263px;
+  margin: 0 auto;
+}
+
+/* variables are here */
+$primary_color: #0a71b1;
+$secondary_color: #ae0000;
+$roboto: "Roboto", serif;
+$poppins: "Poppins", serif;
+
+/* mixins are here */
+@mixin flex_box($align, $justify, $gap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+/* css start */
+
+/* header section start */
+header {
+  .header_section {
+    // header top start
+    .header_top {
+      @include flex_box(center, space-between, 20px);
+      background-color: $primary_color;
+      padding: 10px 30px;
+
+      .header_addresses {
+        @include flex_box(center, null, 1rem);
+
+        .header_address {
+          @include flex_box(center, null, 5px);
+          color: white;
+          font-size: 15px;
+
+          p {
+            font-family: $roboto;
+          }
+        }
+      }
+
+      .header_social_icons {
+        @include flex_box(center, null, 10px);
+        color: white;
+        font-size: 20px;
+      }
+    }
+    // header top end
+
+    // header middle start
+    .header_middle {
+      @include flex_box(center, space-between, 20px);
+      background: url("../public/image/bgbg21.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 5px 30px;
+      .logo {
+        img {
+          height: 89px;
+          max-width: 100%;
+        }
+      }
+
+      .middle_menu_items {
+        @include flex_box(center, null, 10px);
+        .middle_menu_item {
+          a {
+            @include flex_box(center, null, 3px);
+            padding-right: 3px;
+            color: $secondary_color;
+            font-family: $roboto;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-right: 1px solid white;
+          }
+        }
+      }
+
+      .apply_btn {
+        a {
+          color: white;
+          background-color: $secondary_color;
+          font-size: 15px;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 15px 10px;
+        }
+      }
+    }
+    // header middle end
+
+    // header bottom start
+    .bottom_nav_menus {
+      background-color: $primary_color;
+      .bottom_nav_menu {
+        .nav_menu {
+          @include flex_box(center, center, 0);
+
+          .nav_menu_list {
+            @include flex_box(center, null, 0);
+            position: relative;
+
+            a {
+              display: inline-block;
+              width: 100%;
+              font-family: $poppins;
+              font-size: 14px;
+              color: white;
+              background-color: $primary_color;
+              padding: 13px 11px;
+              text-transform: uppercase;
+              transition: 0.3s all ease-in-out;
+
+              &:hover {
+                background-color: $secondary_color;
+              }
+
+              svg {
+                margin-left: 5px;
+              }
+            }
+
+            .dropdown_menus {
+              // background-color: $primary_color;
+              width: 220px;
+              position: absolute;
+              display: none;
+              top: 100%;
+              left: 0;
+              right: 0;
+              z-index: 999;
+
+              .single_dropdown {
+                width: 100%;
+                position: relative;
+
+                .sub_dropdown_menus {
+                  width: 220px;
+                  position: absolute;
+                  display: none;
+                  top: 0;
+                  left: 100%;
+                  right: 0;
+                  z-index: 9999;
+
+                  .single_sub_dropdown {
+                    width: 100%;
+
+                    a {
+                      width: 100%;
+                    }
+                  }
+                }
+
+                &:hover {
+                  .sub_dropdown_menus {
+                    display: block;
+                  }
+                }
+              }
+            }
+
+            &:hover {
+              .dropdown_menus {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    // header bottom end
+  }
+}
+/* header section end */
+
+/* slider section start */
+section {
+  .hero_slider_section {
+    margin-bottom: 15px;
+    .swiper {
+      width: 100%;
+      height: 552px;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          cursor: grab;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-button-next {
+  &::after {
+    color: white;
+    font-weight: bold;
+  }
+}
+.swiper-button-prev {
+  &::after {
+    color: white;
+    font-weight: bold;
+  }
+}
+/* slider section end */
+
+/* Notice section start */
+section {
+  .notice_section {
+    .notice_div {
+      @include flex_box(center, null, 0px);
+
+      .notice_title {
+        color: white;
+        background-color: $secondary_color;
+
+        p {
+          width: max-content;
+          padding: 15px 25px;
+          text-transform: uppercase;
+        }
+      }
+
+      .notice_text {
+        padding: 10px 10px;
+        border: 1px solid $secondary_color;
+      }
+    }
+  }
+}
+/* Notice section end */
+
+/* about section start */
+section {
+  .about_section {
+    padding: 50px;
+    @include flex_box(center, space-between, 10px);
+
+    > div {
+      width: 50%;
+    }
+
+    .about_text {
+      font-family: $poppins;
+
+      h1 {
+        color: $primary_color;
+        text-transform: uppercase;
+        font-size: 28px;
+        line-height: 1;
+      }
+      h4 {
+        color: $secondary_color;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+      h3 {
+        color: $primary_color;
+        margin-bottom: 10px;
+        font-size: 17px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .about_img {
+      img {
+        width: 100%;
+        height: 363px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+/* about section end */
+
+/* Newses and notices section start */
+section {
+  .newses_and_notices_section {
+    @include flex_box(null, space-between, 15px);
+    padding: 0 30px;
+    width: 100%;
+    // newses and events start
+    .newses_and_events {
+      width: 100%;
+
+      // newses and events title start
+      .newses_and_events_title {
+        @include flex_box(center, space-between, 15px);
+        font-family: $roboto;
+        border-bottom: 3px solid #084374;
+        margin-bottom: 10px;
+        .newses_and_events_title_text {
+          h1 {
+            color: white;
+            background-color: $primary_color;
+            padding: 10px 20px 10px 10px;
+            font-size: 20px;
+            clip-path: polygon(0 0, 86% 0, 100% 100%, 75% 100%, 0% 100%);
+          }
+        }
+
+        .newses_and_events_title_link {
+          a {
+            color: #026171;
+            font-size: 15px;
+            padding: 8px;
+            border: 1px solid #026171;
+            border-radius: 2px;
+          }
+        }
+      }
+      // newses and events title end
+
+      // newses and events cards start
+      .notice_cards {
+        @include flex_box(null, null, 15px);
+        flex-direction: column;
+        .notice_single_card {
+          @include flex_box(center, null, 15px);
+          padding: 5px 2px;
+          border: 1px solid lightgray;
+          .notice_card_img {
+            img {
+              display: block;
+              height: 100px;
+              width: 100px;
+              max-width: 100%;
+              border-radius: 10px;
+            }
+          }
+
+          .notice_card_text {
+            font-family: $roboto;
+
+            .notice_card_title {
+              color: black;
+              display: block;
+              font-size: 16px;
+              font-weight: normal;
+              margin-bottom: 3px;
+            }
+
+            .notice_date {
+              @include flex_box(center, null, 10px);
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+
+            .notice_more_text {
+              font-size: 16px;
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+      // newses and events cards end
+    }
+    // newses and events end
+
+    // only notices start
+    .only_notices {
+      width: 100%;
+
+      // only notice title start
+      .only_notice_title {
+        @include flex_box(center, space-between, 15px);
+        font-family: $roboto;
+        border-bottom: 3px solid #084374;
+        margin-bottom: 10px;
+        .only_notice_title_text {
+          h1 {
+            color: white;
+            background-color: $primary_color;
+            padding: 10px 30px 10px 10px;
+            font-size: 20px;
+            clip-path: polygon(0 0, 75% 0, 100% 100%, 75% 100%, 0% 100%);
+          }
+        }
+
+        .only_notice_title_link {
+          a {
+            color: #026171;
+            font-size: 15px;
+            padding: 8px;
+            border: 1px solid #026171;
+            border-radius: 2px;
+          }
+        }
+      }
+      // only notice title end
+
+      // only notice cards start
+      .only_notice_cards {
+        @include flex_box(null, null, 15px);
+        flex-direction: column;
+        .only_notice_single_card {
+          @include flex_box(center, null, 15px);
+          padding: 5px 2px;
+          border: 1px solid lightgray;
+          .only_notice_card_img {
+            img {
+              display: block;
+              height: 100px;
+              width: 100px;
+              max-width: 100%;
+              border-radius: 10px;
+            }
+          }
+
+          .only_notice_card_text {
+            font-family: $roboto;
+
+            .only_notice_card_title {
+              display: block;
+              color: black;
+              font-size: 16px;
+              font-weight: normal;
+              margin-bottom: 3px;
+            }
+
+            .only_notice_date {
+              @include flex_box(center, null, 10px);
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+
+            .only_notice_more_text {
+              font-size: 16px;
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+      // only notice cards end
+    }
+    // only notices end
+
+    // Portal & latest news start
+    .portal_latest_news {
+      width: 100%;
+      // portal & latest news title start
+      .portal_latest_news_title {
+        @include flex_box(center, space-between, 15px);
+        font-family: $roboto;
+        border-bottom: 3px solid #084374;
+        margin-bottom: 10px;
+        .portal_latest_news_title_text {
+          h1 {
+            color: white;
+            background-color: $primary_color;
+            padding: 10px 20px 10px 10px;
+            font-size: 20px;
+            clip-path: polygon(0 0, 86% 0, 100% 100%, 75% 100%, 0% 100%);
+          }
+        }
+      }
+      // portal & latest news title end
+
+      // portal & latest news content start
+      .portal_latest_news_content {
+        .portal_latest_news_content_img {
+          @include flex_box(center, center, 0);
+          background-color: $primary_color;
+          border-radius: 10px;
+          padding: 10px;
+          margin-bottom: 20px;
+          img {
+            height: 52px;
+          }
+        }
+
+        .academic_news {
+          margin-bottom: 10px;
+          .academic_title {
+            color: white;
+            background-color: #135198;
+            font-size: 18px;
+            font-family: $roboto;
+            font-weight: normal;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            padding: 2px;
+          }
+
+          .academic_news_video {
+            .academic_news_text {
+              margin-top: 10px;
+              text-align: center;
+              font-size: 16px;
+              font-weight: normal;
+            }
+          }
+        }
+
+        .other_news {
+          margin-bottom: 10px;
+          .other_news_title {
+            color: white;
+            background-color: #135198;
+            font-size: 18px;
+            font-family: $roboto;
+            font-weight: normal;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            padding: 2px;
+          }
+
+          .other_news_video {
+            .other_news_text {
+              margin-top: 10px;
+              text-align: center;
+              font-size: 16px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+      // portal & latest news content end
+    }
+    // Portal & latest news end
+  }
+}
+/* Newses and notices section end */
+
+// counter section start
+section {
+  .counter_section {
+    margin: 20px 0;
+    background-image: url("../public/image/graduates-throwing-caps.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    .counter_div {
+      background-color: #095d96;
+      opacity: 0.64;
+      .counter_cards {
+        @include flex_box(center, space-between, 20px);
+        padding: 40px;
+        .counter_single_card {
+          @include flex_box(center, center, 5px);
+          flex-direction: column;
+          color: white;
+          padding: 30px 0;
+          width: 100%;
+          background-color: #0a71b1cc;
+
+          .counter_img {
+            img {
+              height: 42px;
+            }
+          }
+
+          h1 {
+            font-size: 35px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+// counter section end
+
+// academic program section start
+section {
+  .academic_program_section {
+    padding: 30px 0;
+    .academic_program_div {
+      padding: 0 10px;
+      .academic_program_title {
+        border-bottom: 2px solid #084374;
+        margin-bottom: 20px;
+        h1 {
+          text-transform: uppercase;
+          width: 30%;
+          color: white;
+          background-color: $primary_color;
+          padding: 10px;
+          clip-path: polygon(0 0, 86% 0, 100% 100%, 75% 100%, 0% 100%);
+        }
+      }
+
+      /* academic program content start */
+      .academic_program_content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        /* academic program tab start */
+        .academic_program_tab {
+          height: 100%;
+          grid-column: span 1;
+          background-color: #94e5ff;
+          border: 1px solid $primary_color;
+
+          .academic_program_tab_title {
+            h3 {
+              font-family: $roboto;
+              padding: 20px;
+              color: white;
+              background-color: #94e5ff;
+              font-size: 17px;
+              cursor: pointer;
+              border-bottom: 2px solid #fff;
+
+              &:hover {
+                color: black;
+                background-color: white;
+              }
+            }
+          }
+        }
+        /* academic program tab end */
+
+        /* academic program tab content start */
+        .academic_program_tab_content {
+          padding: 20px;
+          grid-column: span 3;
+
+          /* undergraduate program */
+          .undergraduate_program {
+            .all_programs {
+              @include flex_box(center, space-between, 10px);
+              flex-wrap: wrap;
+              .single_program {
+                flex: 1 1 calc(50% - 10px);
+                @include flex_box(center, null, 7px);
+                span {
+                  display: inline-block;
+                  font-size: 17px;
+
+                  svg {
+                    color: #006b98;
+                  }
+                }
+              }
+            }
+          }
+
+          /* graduate program */
+          .graduate_program {
+            .all_programs {
+              @include flex_box(center, space-between, 10px);
+              flex-wrap: wrap;
+              .single_program {
+                flex: 1 1 calc(50% - 10px);
+                @include flex_box(center, null, 7px);
+                span {
+                  display: inline-block;
+                  font-size: 17px;
+
+                  svg {
+                    color: #006b98;
+                  }
+                }
+              }
+            }
+          }
+
+          /* Diploma program */
+          .diploma_programs {
+            .all_programs {
+              @include flex_box(center, space-between, 10px);
+              flex-wrap: wrap;
+              .single_program {
+                flex: 1 1 calc(50% - 10px);
+                @include flex_box(center, null, 7px);
+                span {
+                  display: inline-block;
+                  font-size: 17px;
+
+                  svg {
+                    color: #006b98;
+                  }
+                }
+              }
+            }
+          }
+
+          /* Certification Training */
+          .certification_training {
+            .all_programs {
+              @include flex_box(center, space-between, 10px);
+              flex-wrap: wrap;
+              .single_program {
+                flex: 1 1 calc(50% - 10px);
+                @include flex_box(center, null, 7px);
+                span {
+                  display: inline-block;
+                  font-size: 17px;
+
+                  svg {
+                    color: #006b98;
+                  }
+                }
+              }
+            }
+          }
+        }
+        /* academic program tab content end */
+      }
+
+      /* academic program content end */
+    }
+  }
+}
+// academic program section end
+
+// gallery section start
+section {
+  .gallery_section {
+    .gallery_div {
+      padding: 0 10px;
+      .gallery_title {
+        border-bottom: 2px solid #084374;
+        h1 {
+          text-transform: uppercase;
+          width: 30%;
+          color: white;
+          background-color: $primary_color;
+          padding: 10px;
+          clip-path: polygon(0 0, 86% 0, 100% 100%, 75% 100%, 0% 100%);
+        }
+      }
+
+      .gallery_img {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 15px;
+        div {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 303px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+// gallery section end
+
+// Messages section start
+section {
+  .messages_section {
+    .messages_div {
+      padding: 30px 10px;
+      .messages_title {
+        border-bottom: 2px solid #084374;
+        margin-bottom: 30px;
+        h1 {
+          text-transform: uppercase;
+          width: 250px;
+          color: white;
+          background-color: $primary_color;
+          padding: 10px;
+          clip-path: polygon(0 0, 86% 0, 100% 100%, 75% 100%, 0% 100%);
+        }
+      }
+
+      .messages_contents {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+        .message_single_content {
+          .image_message_one {
+            @include flex_box(center, null, 20px);
+            .message_sender_img {
+              img {
+                width: 193px;
+                max-height: 100%;
+              }
+            }
+
+            .message_sender_details {
+              font-family: $poppins;
+              .message_sender_name {
+                color: $primary_color;
+                font-family: $roboto;
+                font-size: 20px;
+              }
+              .message_sender_post {
+                margin: 10px 0;
+                display: block;
+                font-style: italic;
+                font-size: 14px;
+              }
+              .message_one {
+                font-size: 15px;
+                text-align: justify;
+              }
+            }
+          }
+
+          .message_two {
+            font-family: $poppins;
+            margin-top: 10px;
+            p {
+              font-size: 15px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Messages section end
+
+// FACILITIES & EXTRA CURICULAR ACTIVITIES section start
+section {
+  .facilities_and_curricular_section {
+    .facilities_and_curricular_div {
+      padding: 0 10px;
+      .facilities_title {
+        margin-bottom: 30px;
+        border-bottom: 2px solid #084374;
+        h1 {
+          text-transform: uppercase;
+          width: 700px;
+          color: white;
+          background-color: $primary_color;
+          padding: 10px;
+          clip-path: polygon(0 0, 86% 0, 100% 100%, 75% 100%, 0% 100%);
+        }
+      }
+
+      // facilities contents start
+      .facilities_contents {
+        padding: 0 10px;
+        .facilities_img {
+          @include flex_box(center, space-between, 20px);
+          div {
+            width: 100%;
+            img {
+              width: 290px;
+              max-width: 100%;
+              height: 210px;
+            }
+          }
+        }
+
+        .facilities_img_with_title {
+          @include flex_box(center, space-between, 20px);
+          margin-top: 20px;
+
+          div {
+            width: 100%;
+
+            .img_title {
+              font-family: $roboto;
+              font-size: 18px;
+              text-align: center;
+              padding: 10px 0;
+              color: white;
+              background-color: #2a8500;
+            }
+
+            img {
+              width: 290px;
+              max-width: 100%;
+              height: 210px;
+            }
+          }
+        }
+      }
+      // facilities contents end
+    }
+  }
+}
+// FACILITIES & EXTRA CURICULAR ACTIVITIES section end
+
+footer {
+  background-color: $primary_color;
+  .footer_section {
+    .footer_div {
+      @include flex_box(null, space-between, 15px);
+
+      .footer_logo {
+        width: 100%;
+        padding: 30px 25px;
+        background-color: #07578f;
+        .footer_logo_img {
+          img {
+            height: 122px;
+            max-width: 100%;
+          }
+        }
+
+        .footer_text {
+          margin: 15px 0;
+          p {
+            font-family: $poppins;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+
+        .footer_social_icons {
+          @include flex_box(center, center, 10px);
+          a {
+            @include flex_box(center, center, 0);
+            color: white;
+            background-color: #053e66;
+            padding: 10px;
+            transition: 0.5s all ease-in-out;
+
+            &:hover {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+
+      .footer_site_link {
+        width: 100%;
+        padding: 30px 25px;
+
+        .site_link_title {
+          color: white;
+          font-family: $roboto;
+          font-size: 17px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        .site_link_url {
+          li {
+            margin-bottom: 10px;
+            a {
+              @include flex_box(center, null, 10px);
+              color: white;
+              font-family: $roboto;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .footer_important_link {
+        width: 100%;
+        padding: 30px 25px;
+
+        .important_link_title {
+          color: white;
+          font-family: $roboto;
+          font-size: 17px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        .important_link_url {
+          li {
+            margin-bottom: 10px;
+            a {
+              @include flex_box(center, null, 10px);
+              color: white;
+              font-family: $roboto;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .footer_address {
+        width: 100%;
+        padding: 30px 25px;
+
+        .address_title {
+          color: white;
+          font-family: $roboto;
+          font-size: 17px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        .all_address {
+          color: white;
+
+          > div {
+            margin-bottom: 5px;
+          }
+
+          .address_name {
+            font-family: $roboto;
+            font-size: 16px;
+            width: max-content;
+            margin-bottom: 5px;
+          }
+
+          .main_address {
+            span {
+              font-family: $roboto;
+              font-size: 16px;
+            }
+
+            span:first-child {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* css end */
