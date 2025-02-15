@@ -77,11 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // tab logic end
 
 // countup js start
-// $(".counter_number").counterUp({
-//   delay: 10,
-//   time: 1000,
-// });
-
 jQuery(document).ready(function ($) {
   $(".counter_number").counterUp({
     delay: 10,
