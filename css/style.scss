@@ -35,40 +35,15 @@ $poppins: "Poppins", serif;
 header {
   .header_section {
     // header top start
-    .header_top {
-      @include flex_box(center, space-between, 20px);
-      background-color: $primary_color;
-      padding: 10px 30px;
-
-      .header_addresses {
-        @include flex_box(center, null, 1rem);
-
-        .header_address {
-          @include flex_box(center, null, 5px);
-          color: white;
-          font-size: 15px;
-
-          p {
-            font-family: $roboto;
-          }
-        }
-      }
-
-      .header_social_icons {
-        @include flex_box(center, null, 10px);
-        color: white;
-        font-size: 20px;
-      }
-    }
     // header top end
 
     // header middle start
     .header_middle {
-      @include flex_box(center, space-between, 20px);
+      @include flex_box(flex-start, space-between, 20px);
       background: url("../public/image/bgbg21.jpg");
       background-size: cover;
       background-position: center;
-      padding: 5px 30px;
+      padding: 15px 30px;
       .logo {
         img {
           height: 89px;
@@ -94,6 +69,7 @@ header {
 
       .apply_btn {
         a {
+          display: inline-block;
           color: white;
           background-color: $secondary_color;
           font-size: 15px;
@@ -842,7 +818,7 @@ section {
 section {
   .facilities_and_curricular_section {
     .facilities_and_curricular_div {
-      padding: 0 10px;
+      padding: 40px 10px;
       .facilities_title {
         margin-bottom: 30px;
         border-bottom: 2px solid #084374;

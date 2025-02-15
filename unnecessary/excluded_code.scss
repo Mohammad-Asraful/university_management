@@ -1,0 +1,27 @@
+// header top start
+.header_top {
+  @include flex_box(center, space-between, 20px);
+  background-color: $primary_color;
+  padding: 10px 30px;
+
+  .header_addresses {
+    @include flex_box(center, null, 1rem);
+
+    .header_address {
+      @include flex_box(center, null, 5px);
+      color: white;
+      font-size: 15px;
+
+      p {
+        font-family: $roboto;
+      }
+    }
+  }
+
+  .header_social_icons {
+    @include flex_box(center, null, 10px);
+    color: white;
+    font-size: 20px;
+  }
+}
+// header top end

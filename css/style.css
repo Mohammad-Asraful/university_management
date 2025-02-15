@@ -16,45 +16,15 @@
 /* mixins are here */
 /* css start */
 /* header section start */
-header .header_section .header_top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background-color: #0a71b1;
-  padding: 10px 30px;
-}
-header .header_section .header_top .header_addresses {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-header .header_section .header_top .header_addresses .header_address {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: white;
-  font-size: 15px;
-}
-header .header_section .header_top .header_addresses .header_address p {
-  font-family: "Roboto", serif;
-}
-header .header_section .header_top .header_social_icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-size: 20px;
-}
 header .header_section .header_middle {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
   background: url("../public/image/bgbg21.jpg");
   background-size: cover;
   background-position: center;
-  padding: 5px 30px;
+  padding: 15px 30px;
 }
 header .header_section .header_middle .logo img {
   height: 89px;
@@ -78,6 +48,7 @@ header .header_section .header_middle .middle_menu_items .middle_menu_item a {
   border-right: 1px solid white;
 }
 header .header_section .header_middle .apply_btn a {
+  display: inline-block;
   color: white;
   background-color: #ae0000;
   font-size: 15px;
@@ -728,7 +699,7 @@ section .messages_section .messages_div .messages_contents .message_single_conte
 }
 
 section .facilities_and_curricular_section .facilities_and_curricular_div {
-  padding: 0 10px;
+  padding: 40px 10px;
 }
 section .facilities_and_curricular_section .facilities_and_curricular_div .facilities_title {
   margin-bottom: 30px;
